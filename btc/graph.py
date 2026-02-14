@@ -1,7 +1,7 @@
 import polars as pl
 import plotly.graph_objects as go
 
-df = pl.read_parquet("/BTCUSDT/BTCUSDT-1h.parquet")
+df = pl.read_parquet("BTCUSDT/BTCUSDT-1d.parquet")
 
 df = df.with_columns(
     pl.col("open_time")

@@ -16,10 +16,7 @@ df = df.rename({
     "column_7": "close_time",
 })
 
-# Write to temporary file first
 df.write_parquet(temp_path)
 
-# Replace original file with temporary file
 os.replace(temp_path, path)
 
-print("✅ headers changed permanently")
