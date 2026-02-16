@@ -43,7 +43,6 @@ df_2020 = df[df["date"] >= "2024-01-01"]
 corr = df_2020["btc_log_ret"].corr(df_2020["nasdaq_log_ret"])
 print("Correlation from 2024:", corr)
 
-#wykres log return btc i nasdaq
 plt.plot(df["date"], df["btc_log_ret"], label="BTC")
 plt.plot(df["date"], df["nasdaq_log_ret"], label="NASDAQ")
 plt.legend()
